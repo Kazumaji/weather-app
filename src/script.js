@@ -7,14 +7,16 @@ const search = document.getElementById('search')
 const url = (city) => 
 `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
 
-async function getWeatherByLocation(city) {
+  async function getWeatherByLocation(city) {
   const resp = await fetch(url(city), {
   origin: 'cors' })
   const respData = await resp.json()
 
-  addWeatherToPage(respData)
+  try {
+    addWeatherToPage(respData)} catch(e) {
+      alert('Неправильно введено название города')
+    }
 }
-
 function addWeatherToPage(data) {
     const temp = KtoC(data.main.temp)
     const weather = document.createElement('div')
@@ -22,13 +24,9 @@ function addWeatherToPage(data) {
     weather.innerHTML = `
     <h2><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" />${temp}°C</h2>
     `
-
-  // cleanup
+    
   main.innerHTML = ''
   main.appendChild(weather)
-
-  const fTemp = KtoC(data.main.feels_like)
-  // const wState = (data.weather.main)
 }
 
 function KtoC(K) {
