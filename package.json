@@ -1,0 +1,31 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Pure JavaScript app",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kopimer/weather-app.git"
+  },
+  "keywords": [
+    "JS",
+    "JavaScript",
+    "weather",
+    "weather-app",
+    "погода",
+    "приложение",
+    "html",
+    "css",
+    "vanilla",
+    "js"
+  ],
+  "author": "Dmitrii Durnovtsev <shopoc54@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kopimer/weather-app/issues"
+  },
+  "homepage": "https://github.com/Kopimer/weather-app#readme"
+}
